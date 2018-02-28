@@ -69,7 +69,9 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeToSection" {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "HomeToSection":
             let destination = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
             let section = sections[indexPath.row]
@@ -83,11 +85,16 @@ class HomeViewController: UIViewController {
 
             presentSectionViewController.cellFrame = cellFrame
             presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
-            
+
             isStatusBarHidden = true
             UIView.animate(withDuration: 0.5, animations: {
                 self.setNeedsStatusBarAppearanceUpdate()
             })
+        case "Benefits":
+            let destination = segue.destination as! BenefitsViewController
+            destination.view.translatesAutoresizingMaskIntoConstraints = false
+        default:
+            break
         }
     }
     
