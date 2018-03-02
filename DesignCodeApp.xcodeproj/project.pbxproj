@@ -50,8 +50,8 @@
 		790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
 		792AEAE42046F3F900E4F2E5 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		792AEAE62046F52400E4F2E5 /* BenefitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitCollectionViewCell.swift; sourceTree = "<group>"; };
-		792AEAE82047347800E4F2E5 /* Embed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Embed.storyboard; path = "/Users/tmergulhao/Downloads/Multiple-Storybaords/DesignCodeApp/Embed/Embed.storyboard"; sourceTree = "<absolute>"; };
-		792AEAEA204734E900E4F2E5 /* Dialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Dialog.storyboard; path = "/Users/tmergulhao/Downloads/Multiple-Storybaords/DesignCodeApp/Dialog/Dialog.storyboard"; sourceTree = "<absolute>"; };
+		792AEAE82047347800E4F2E5 /* Embed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Embed.storyboard; sourceTree = "<group>"; };
+		792AEAEA204734E900E4F2E5 /* Dialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dialog.storyboard; sourceTree = "<group>"; };
 		792AEAF02047361100E4F2E5 /* Section.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Section.storyboard; sourceTree = "<group>"; };
 		792AEAF720473C5C00E4F2E5 /* Web View Controller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Web View Controller.storyboard"; sourceTree = "<group>"; };
 		7932CE7E200BDD810006980E /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
