@@ -91,8 +91,7 @@ class HomeViewController: UIViewController {
                 self.setNeedsStatusBarAppearanceUpdate()
             })
         case "Benefits":
-            let destination = segue.destination as! BenefitsViewController
-            destination.view.translatesAutoresizingMaskIntoConstraints = false
+            segue.destination.view.translatesAutoresizingMaskIntoConstraints = false
         default:
             break
         }
