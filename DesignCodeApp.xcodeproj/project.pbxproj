@@ -15,7 +15,7 @@
 		792AEAEB2047358200E4F2E5 /* Embed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAE82047347800E4F2E5 /* Embed.storyboard */; };
 		792AEAEC2047358A00E4F2E5 /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAEA204734E900E4F2E5 /* Dialog.storyboard */; };
 		792AEAF12047361100E4F2E5 /* Section.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAF02047361100E4F2E5 /* Section.storyboard */; };
-		792AEAF820473C5D00E4F2E5 /* Web View Controller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAF720473C5C00E4F2E5 /* Web View Controller.storyboard */; };
+		792AEAF820473C5D00E4F2E5 /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAF720473C5C00E4F2E5 /* WebViewController.storyboard */; };
 		7932CE7F200BDD810006980E /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE7E200BDD810006980E /* ChaptersViewController.swift */; };
 		7932CE81200BE1390006980E /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */; };
 		7932CE83200BE1890006980E /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CE82200BE1890006980E /* BookmarksTableViewController.swift */; };
@@ -29,6 +29,7 @@
 		79AACD5F201F52B400F5D2AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AACD5E201F52B400F5D2AA /* LoginViewController.swift */; };
 		79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */; };
 		79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */; };
+		79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */; };
 		79F7A71020208FB600C54511 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */; };
 		9688C5C51FE72BF000BCD68A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688C5C41FE72BF000BCD68A /* Data.swift */; };
 		9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */; };
@@ -53,7 +54,7 @@
 		792AEAE82047347800E4F2E5 /* Embed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Embed.storyboard; sourceTree = "<group>"; };
 		792AEAEA204734E900E4F2E5 /* Dialog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dialog.storyboard; sourceTree = "<group>"; };
 		792AEAF02047361100E4F2E5 /* Section.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Section.storyboard; sourceTree = "<group>"; };
-		792AEAF720473C5C00E4F2E5 /* Web View Controller.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Web View Controller.storyboard"; sourceTree = "<group>"; };
+		792AEAF720473C5C00E4F2E5 /* WebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
 		7932CE7E200BDD810006980E /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 		7932CE82200BE1890006980E /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		79AACD5E201F52B400F5D2AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
+		79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicType.swift"; sourceTree = "<group>"; };
 		79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		813966B81AF159877D915B69 /* Pods-DesignCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 		9688C5C41FE72BF000BCD68A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -113,13 +115,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		792AEAF22047366700E4F2E5 /* Web View Controller */ = {
+		792AEAF22047366700E4F2E5 /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
 				7932CE84200BE6C80006980E /* WebViewController.swift */,
-				792AEAF720473C5C00E4F2E5 /* Web View Controller.storyboard */,
+				792AEAF720473C5C00E4F2E5 /* WebViewController.storyboard */,
 			);
-			path = "Web View Controller";
+			path = WebViewController;
 			sourceTree = "<group>";
 		};
 		792AEAF32047368200E4F2E5 /* Embed */ = {
@@ -178,6 +180,7 @@
 		9698CD1D1FBB5DE000501C47 /* DesignCodeApp */ = {
 			isa = PBXGroup;
 			children = (
+				79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */,
 				9698CD1E1FBB5DE000501C47 /* AppDelegate.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
 				9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */,
@@ -193,7 +196,7 @@
 				797EEE90202371BE00123433 /* ScoreCollectionViewCell.swift */,
 				792AEAF5204736E500E4F2E5 /* Dialog */,
 				792AEAF62047376500E4F2E5 /* Section */,
-				792AEAF22047366700E4F2E5 /* Web View Controller */,
+				792AEAF22047366700E4F2E5 /* WebViewController */,
 				792AEAF32047368200E4F2E5 /* Embed */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
 				9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */,
@@ -271,7 +274,7 @@
 				792AEAEC2047358A00E4F2E5 /* Dialog.storyboard in Resources */,
 				792AEAF12047361100E4F2E5 /* Section.storyboard in Resources */,
 				9698CD291FBB5DE000501C47 /* Assets.xcassets in Resources */,
-				792AEAF820473C5D00E4F2E5 /* Web View Controller.storyboard in Resources */,
+				792AEAF820473C5D00E4F2E5 /* WebViewController.storyboard in Resources */,
 				9698CD241FBB5DE000501C47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +350,7 @@
 				7932CE87200BE9080006980E /* MoreViewController.swift in Sources */,
 				9688C5C51FE72BF000BCD68A /* Data.swift in Sources */,
 				79AACD5F201F52B400F5D2AA /* LoginViewController.swift in Sources */,
+				79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
 				797EEE8F202368F800123433 /* QuestionCollectionViewCell.swift in Sources */,

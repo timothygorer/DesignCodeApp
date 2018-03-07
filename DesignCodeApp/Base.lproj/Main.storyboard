@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -704,28 +705,27 @@ design and code an iOS 11 app.</string>
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bookmarks/code" translatesAutoresizingMaskIntoConstraints="NO" id="Ia8-Ne-1WQ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="Bookmarks/code" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ia8-Ne-1WQ">
                                             <rect key="frame" x="16" y="20" width="44" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="44" id="aaC-yp-Yyf"/>
-                                                <constraint firstAttribute="height" constant="44" id="gjl-i0-fPO"/>
-                                            </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoN-gu-jVB">
                                             <rect key="frame" x="47" y="20" width="18" height="18"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcO-Z8-30J">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcO-Z8-30J">
                                                     <rect key="frame" x="5.5" y="0.5" width="7.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="scaledFont" value="body"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="jcO-Z8-30J" firstAttribute="centerY" secondItem="BoN-gu-jVB" secondAttribute="centerY" id="ITQ-Dv-8ZJ"/>
-                                                <constraint firstAttribute="height" constant="18" id="h9x-kK-sWP"/>
-                                                <constraint firstAttribute="width" constant="18" id="rhD-eL-sRk"/>
+                                                <constraint firstAttribute="height" secondItem="jcO-Z8-30J" secondAttribute="height" id="obU-Ky-XVZ"/>
+                                                <constraint firstAttribute="width" secondItem="BoN-gu-jVB" secondAttribute="height" multiplier="1:1" id="pGa-9Z-qFQ"/>
                                                 <constraint firstItem="jcO-Z8-30J" firstAttribute="centerX" secondItem="BoN-gu-jVB" secondAttribute="centerX" id="ui7-j9-mfL"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -737,18 +737,24 @@ design and code an iOS 11 app.</string>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-iC-377">
                                             <rect key="frame" x="73" y="20" width="286" height="86"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-j4-sYY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECTION NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-j4-sYY">
                                                     <rect key="frame" x="0.0" y="0.0" width="286" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="scaledFont" value="callout"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-SD-Z6O">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Part name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-SD-Z6O">
                                                     <rect key="frame" x="0.0" y="18" width="286" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="scaledFont" value="title2"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Content — More than ever, iOS 11 is going back to its roots. Bold fonts are everywhere" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-je-XLd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Content — More than ever, iOS 11 is going back to its roots. Bold fonts are everywhere" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5o-je-XLd">
                                                     <rect key="frame" x="0.0" y="42" width="286" height="44"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -761,12 +767,20 @@ design and code an iOS 11 app.</string>
                                         <constraint firstItem="4nc-iC-377" firstAttribute="top" secondItem="7gb-VA-Um7" secondAttribute="topMargin" constant="9" id="0st-bm-jQc"/>
                                         <constraint firstItem="BoN-gu-jVB" firstAttribute="top" secondItem="Ia8-Ne-1WQ" secondAttribute="top" id="627-iQ-XcJ"/>
                                         <constraint firstItem="BoN-gu-jVB" firstAttribute="trailing" secondItem="Ia8-Ne-1WQ" secondAttribute="trailing" constant="5" id="DCq-X8-YbO"/>
+                                        <constraint firstItem="4nc-iC-377" firstAttribute="leading" secondItem="7gb-VA-Um7" secondAttribute="leadingMargin" id="LfF-p1-h62"/>
                                         <constraint firstItem="Ia8-Ne-1WQ" firstAttribute="top" secondItem="7gb-VA-Um7" secondAttribute="topMargin" constant="9" id="Y2H-Qd-Cgr"/>
+                                        <constraint firstItem="4nc-iC-377" firstAttribute="leading" secondItem="7gb-VA-Um7" secondAttribute="leadingMargin" constant="57" id="ZpT-Bn-74x"/>
+                                        <constraint firstItem="4nc-iC-377" firstAttribute="top" secondItem="Ia8-Ne-1WQ" secondAttribute="bottom" id="d1q-ZN-CBX"/>
                                         <constraint firstItem="4nc-iC-377" firstAttribute="trailing" secondItem="7gb-VA-Um7" secondAttribute="trailingMargin" id="eZ5-Zg-we5"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="4nc-iC-377" secondAttribute="bottom" constant="8" id="nLI-qN-cas"/>
-                                        <constraint firstItem="4nc-iC-377" firstAttribute="leading" secondItem="BoN-gu-jVB" secondAttribute="trailing" constant="8" id="oX3-M9-GxU"/>
                                         <constraint firstItem="Ia8-Ne-1WQ" firstAttribute="leading" secondItem="7gb-VA-Um7" secondAttribute="leadingMargin" id="wJQ-ZG-ne8"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="LfF-p1-h62"/>
+                                            <exclude reference="d1q-ZN-CBX"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="70" minY="0.0" maxX="16" maxY="0.0"/>
                                 <connections>
@@ -775,6 +789,10 @@ design and code an iOS 11 app.</string>
                                     <outlet property="chapterNumberLabel" destination="jcO-Z8-30J" id="xsv-hQ-B9w"/>
                                     <outlet property="chapterTitleLabel" destination="Hfi-j4-sYY" id="y04-eC-1Z5"/>
                                     <outlet property="titleLabel" destination="aL8-SD-Z6O" id="Q0k-Z0-aFl"/>
+                                    <outletCollection property="regularConstraints" destination="ZpT-Bn-74x" collectionClass="NSMutableArray" id="3JI-Vn-ckF"/>
+                                    <outletCollection property="accessibilityConstraints" destination="LfF-p1-h62" collectionClass="NSMutableArray" id="Ljo-0z-uP1"/>
+                                    <outletCollection property="regularConstraints" destination="0st-bm-jQc" collectionClass="NSMutableArray" id="9ay-Qb-bes"/>
+                                    <outletCollection property="accessibilityConstraints" destination="d1q-ZN-CBX" collectionClass="NSMutableArray" id="y8F-nw-Nse"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1281,7 +1299,7 @@ design and code an iOS 11 app.</string>
                             <outlet property="delegate" destination="Bfo-gp-xXY" id="t0a-b6-hDi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Exercises" image="Tab Bar/exercises" selectedImage="Tab Bar/exercises-active" id="NTL-x2-nFU"/>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="Tab Bar/exercises" largeContentSizeImage="Tab Bar/exercises-accessible" selectedImage="Tab Bar/exercises-active" id="NTL-x2-nFU"/>
                     <connections>
                         <segue destination="OGi-F2-blC" kind="presentation" identifier="Present Exercise Dialog" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="UxZ-Rc-ENL"/>
                     </connections>
@@ -1707,7 +1725,7 @@ design and code an iOS 11 app.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="58Y-AV-cZ1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" selectedImage="Tab Bar/more-active" id="HgJ-wX-1Mg"/>
+                    <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" largeContentSizeImage="Tab Bar/more-accessible" selectedImage="Tab Bar/more-active" id="HgJ-wX-1Mg"/>
                     <connections>
                         <outlet property="progress1Label" destination="0jk-ws-HYl" id="ovX-bJ-zSW"/>
                         <outlet property="progress1View" destination="SOt-n1-kry" id="Ob2-8L-Blo"/>
@@ -1748,7 +1766,7 @@ design and code an iOS 11 app.</string>
         <scene sceneID="nDL-b1-NbC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qnb-f9-fqH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Tab Bar/home" selectedImage="Tab Bar/home-active" id="LQm-F1-NFf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Tab Bar/home" largeContentSizeImage="Tab Bar/home-accessible" selectedImage="Tab Bar/home-active" id="LQm-F1-NFf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1Vz-6d-afs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1767,7 +1785,7 @@ design and code an iOS 11 app.</string>
         <scene sceneID="DE8-YK-wAf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JdK-0e-h5A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" selectedImage="Tab Bar/chapters-active" id="3DL-Qv-RCl"/>
+                    <tabBarItem key="tabBarItem" title="Chapters" image="Tab Bar/chapters" largeContentSizeImage="Tab Bar/chapters-accessible" selectedImage="Tab Bar/chapters-active" id="3DL-Qv-RCl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="bda-8X-Cee">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -1786,7 +1804,7 @@ design and code an iOS 11 app.</string>
         <scene sceneID="Bze-J0-Msg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mC4-Gt-UQD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bookmarks" image="Tab Bar/bookmarks" selectedImage="Tab Bar/bookmarks-active" id="bQK-Vd-vt3"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="Tab Bar/bookmarks" largeContentSizeImage="Tab Bar/bookmarks-accessible" selectedImage="Tab Bar/bookmarks-active" id="bQK-Vd-vt3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gJL-eW-4WG">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -1877,21 +1895,26 @@ design and code an iOS 11 app.</string>
         <image name="Placeholder/image-ring-2" width="70" height="70"/>
         <image name="Placeholder/image-ring-3" width="70" height="70"/>
         <image name="Tab Bar/bookmarks" width="20" height="26"/>
+        <image name="Tab Bar/bookmarks-accessible" width="60" height="78"/>
         <image name="Tab Bar/bookmarks-active" width="20" height="26"/>
         <image name="Tab Bar/chapters" width="28" height="24"/>
+        <image name="Tab Bar/chapters-accessible" width="84" height="72"/>
         <image name="Tab Bar/chapters-active" width="28" height="24"/>
         <image name="Tab Bar/exercises" width="30" height="24"/>
+        <image name="Tab Bar/exercises-accessible" width="90" height="72"/>
         <image name="Tab Bar/exercises-active" width="30" height="24"/>
         <image name="Tab Bar/home" width="24" height="25"/>
+        <image name="Tab Bar/home-accessible" width="72" height="75"/>
         <image name="Tab Bar/home-active" width="24" height="25"/>
         <image name="Tab Bar/more" width="30" height="8"/>
+        <image name="Tab Bar/more-accessible" width="90" height="24"/>
         <image name="Tab Bar/more-active" width="30" height="8"/>
         <image name="icon-menu-check" width="16" height="16"/>
         <image name="ios11" width="2880" height="1600"/>
         <image name="swift-wallpaper" width="5120" height="2880"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fhk-rx-D3d"/>
-        <segue reference="22V-ZA-hMz"/>
+        <segue reference="7zI-z8-FQ5"/>
+        <segue reference="Abh-JD-idI"/>
     </inferredMetricsTieBreakers>
 </document>
