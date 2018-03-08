@@ -10,6 +10,8 @@
 		09D842196496D3BC05613910 /* Pods_DesignCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */; };
 		790D67B72022509900BBD0A3 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */; };
 		790D67B920226B8300BBD0A3 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */; };
+		7919265920507EC0001A2D5B /* PresentMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919265820507EC0001A2D5B /* PresentMoreViewController.swift */; };
+		7919265B205142D3001A2D5B /* CATransform3D+Perspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */; };
 		792AEAE52046F3F900E4F2E5 /* BenefitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AEAE42046F3F900E4F2E5 /* BenefitsViewController.swift */; };
 		792AEAE72046F52400E4F2E5 /* BenefitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AEAE62046F52400E4F2E5 /* BenefitCollectionViewCell.swift */; };
 		792AEAEB2047358200E4F2E5 /* Embed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792AEAE82047347800E4F2E5 /* Embed.storyboard */; };
@@ -49,6 +51,8 @@
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDialogViewController.swift; sourceTree = "<group>"; };
+		7919265820507EC0001A2D5B /* PresentMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentMoreViewController.swift; sourceTree = "<group>"; };
+		7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Perspective.swift"; sourceTree = "<group>"; };
 		792AEAE42046F3F900E4F2E5 /* BenefitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsViewController.swift; sourceTree = "<group>"; };
 		792AEAE62046F52400E4F2E5 /* BenefitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitCollectionViewCell.swift; sourceTree = "<group>"; };
 		792AEAE82047347800E4F2E5 /* Embed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Embed.storyboard; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				792AEAF22047366700E4F2E5 /* WebViewController */,
 				792AEAF32047368200E4F2E5 /* Embed */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
+				7919265820507EC0001A2D5B /* PresentMoreViewController.swift */,
+				7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */,
 				9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */,
 				9698CD281FBB5DE000501C47 /* Assets.xcassets */,
 				9698CD2D1FBB5DE000501C47 /* Info.plist */,
@@ -307,12 +313,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Ambience/Ambience.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ambience.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
@@ -353,9 +361,11 @@
 				79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
+				7919265920507EC0001A2D5B /* PresentMoreViewController.swift in Sources */,
 				797EEE8F202368F800123433 /* QuestionCollectionViewCell.swift in Sources */,
 				96ABF7311FEEA64300AF4146 /* TestimonialViewController.swift in Sources */,
 				79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */,
+				7919265B205142D3001A2D5B /* CATransform3D+Perspective.swift in Sources */,
 				797EEE91202371BE00123433 /* ScoreCollectionViewCell.swift in Sources */,
 				9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */,
 				799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */,

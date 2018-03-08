@@ -51,6 +51,23 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var progress2Label: UILabel!
     @IBOutlet weak var progress3Label: UILabel!
 
+    @IBOutlet weak var dialogView: UIView!
+    @IBOutlet var panToClose : InteractionPanToClose!
+
+    weak var previousViewController : UIViewController?
+
+    @IBAction func tappedOutsideDialog (_ sender : UITapGestureRecognizer) {
+
+        UIView.animate(withDuration: 0.5, animations: {
+
+            self.panToClose.rotateDialogOut()
+
+        }) { (finished) in
+
+            self.tabBarController?.selectedViewController = self.previousViewController
+        }
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -88,5 +105,9 @@ class MoreViewController: UIViewController {
             let toVC = toNav.viewControllers.first as! WebViewController
             toVC.urlString = sender as! String
         }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

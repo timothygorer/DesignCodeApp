@@ -11,4 +11,5 @@ target 'DesignCodeApp' do
   pod 'Spring'
   pod 'TPKeyboardAvoiding'
   pod 'MKRingProgressView'
+  pod 'Ambience'
 end

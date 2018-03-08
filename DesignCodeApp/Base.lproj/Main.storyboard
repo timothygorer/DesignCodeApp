@@ -1308,28 +1308,42 @@ design and code an iOS 11 app.</string>
             </objects>
             <point key="canvasLocation" x="4381.6000000000004" y="-468.21589205397305"/>
         </scene>
-        <!--More-->
+        <!--View Controller-->
         <scene sceneID="zAw-h1-aHy">
             <objects>
                 <viewController id="7ba-eV-iRr" customClass="MoreViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nRc-zM-2kf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1G-t5-SuE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tm5-lE-QHM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6Z-6e-Uua">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="731"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw6-cw-xBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                        <connections>
+                                            <action selector="tappedOutsideDialog:" destination="7ba-eV-iRr" eventType="touchUpInside" id="92o-RE-t1k"/>
+                                        </connections>
+                                    </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JJ9-FO-tAo" userLabel="Dialog View" customClass="DesignableView" customModule="Spring">
                                         <rect key="frame" x="20" y="20" width="335" height="684"/>
                                         <subviews>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3Q-bU-pS1">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="684"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V66-DL-uiy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="684"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <blurEffect style="dark"/>
+                                            </visualEffectView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svE-1z-lb5" userLabel="Sizing View">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="684"/>
                                                 <subviews>
@@ -1338,6 +1352,12 @@ design and code an iOS 11 app.</string>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aH0-Y6-Dx1">
                                                         <rect key="frame" x="20" y="46" width="295" height="98"/>
@@ -1383,6 +1403,12 @@ design and code an iOS 11 app.</string>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                         </subviews>
                                                                         <constraints>
@@ -1400,6 +1426,12 @@ design and code an iOS 11 app.</string>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -1441,6 +1473,12 @@ design and code an iOS 11 app.</string>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                         </subviews>
                                                                         <constraints>
@@ -1458,6 +1496,12 @@ design and code an iOS 11 app.</string>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -1499,6 +1543,12 @@ design and code an iOS 11 app.</string>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                         </subviews>
                                                                         <constraints>
@@ -1516,6 +1566,12 @@ design and code an iOS 11 app.</string>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="0.50414704619999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
@@ -1536,6 +1592,15 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Login" image="More/logo">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <segue destination="UOS-Ee-tIR" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Abh-JD-idI"/>
                                                                         </connections>
@@ -1549,6 +1614,15 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Updates" image="More/info">
                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqK-xn-XSm">
                                                                         <rect key="frame" x="0.0" y="120.5" width="335" height="59"/>
@@ -1559,6 +1633,15 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Read on Safari" image="More/safari">
                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="safariButtonTapped:" destination="7ba-eV-iRr" eventType="touchUpInside" id="qZj-NM-HNN"/>
                                                                         </connections>
@@ -1577,6 +1660,15 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Community" image="More/community">
                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="communityButtonTapped:" destination="7ba-eV-iRr" eventType="touchUpInside" id="78k-hY-0xk"/>
                                                                         </connections>
@@ -1590,6 +1682,15 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Email Support" image="More/email">
                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="emailButtonTapped:" destination="7ba-eV-iRr" eventType="touchUpInside" id="3Pc-Wh-d2Z"/>
                                                                         </connections>
@@ -1603,6 +1704,18 @@ design and code an iOS 11 app.</string>
                                                                         <state key="normal" title="Ambience" image="More/ambience">
                                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                                <color key="value" red="0.80392156862745101" green="0.80392156862745101" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="switchAmbience:" destination="d4R-OG-YpT" eventType="touchUpInside" id="Cfp-Yp-0LX"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1624,12 +1737,24 @@ design and code an iOS 11 app.</string>
                                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                <color key="value" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mak-nY-hZI">
                                                         <rect key="frame" x="114.5" y="627" width="106" height="22"/>
                                                         <state key="normal" title="@MengTo" image="More/twitter">
                                                             <color key="titleColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="twitterHandleTapped:" destination="7ba-eV-iRr" eventType="touchUpInside" id="vcV-KV-6df"/>
                                                         </connections>
@@ -1651,13 +1776,23 @@ design and code an iOS 11 app.</string>
                                                     <constraint firstItem="Mak-nY-hZI" firstAttribute="centerX" secondItem="svE-1z-lb5" secondAttribute="centerX" id="lyg-dR-SXu"/>
                                                     <constraint firstAttribute="trailing" secondItem="YqI-mM-OKn" secondAttribute="trailing" id="t0M-I2-jpQ"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="L3Q-bU-pS1" secondAttribute="trailing" id="3Mr-1C-7LU"/>
                                             <constraint firstItem="svE-1z-lb5" firstAttribute="top" secondItem="JJ9-FO-tAo" secondAttribute="top" id="5qP-Wu-A19"/>
                                             <constraint firstAttribute="trailing" secondItem="svE-1z-lb5" secondAttribute="trailing" id="Dz9-u4-NQ3"/>
+                                            <constraint firstItem="L3Q-bU-pS1" firstAttribute="top" secondItem="JJ9-FO-tAo" secondAttribute="top" id="Ii3-cJ-nnw"/>
                                             <constraint firstAttribute="bottom" secondItem="svE-1z-lb5" secondAttribute="bottom" id="Uab-qn-b4c"/>
+                                            <constraint firstAttribute="bottom" secondItem="L3Q-bU-pS1" secondAttribute="bottom" id="VaU-kc-Mcu"/>
                                             <constraint firstItem="svE-1z-lb5" firstAttribute="leading" secondItem="JJ9-FO-tAo" secondAttribute="leading" id="YwV-Mh-YuS"/>
+                                            <constraint firstItem="L3Q-bU-pS1" firstAttribute="leading" secondItem="JJ9-FO-tAo" secondAttribute="leading" id="eqQ-GE-WBN"/>
                                             <constraint firstAttribute="width" constant="600" id="peQ-LP-Mmw"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -1688,11 +1823,15 @@ design and code an iOS 11 app.</string>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="JJ9-FO-tAo" secondAttribute="trailing" constant="20" id="0iu-1t-SVc"/>
+                                    <constraint firstAttribute="bottom" secondItem="sw6-cw-xBc" secondAttribute="bottom" id="4ei-UZ-jNB"/>
+                                    <constraint firstItem="sw6-cw-xBc" firstAttribute="leading" secondItem="e6Z-6e-Uua" secondAttribute="leading" id="5GI-fS-RNA"/>
                                     <constraint firstItem="JJ9-FO-tAo" firstAttribute="top" secondItem="e6Z-6e-Uua" secondAttribute="top" constant="20" id="8m1-hj-Twe"/>
                                     <constraint firstItem="JJ9-FO-tAo" firstAttribute="centerX" secondItem="e6Z-6e-Uua" secondAttribute="centerX" id="P5D-8T-LfT"/>
                                     <constraint firstItem="JJ9-FO-tAo" firstAttribute="centerY" secondItem="e6Z-6e-Uua" secondAttribute="centerY" id="fC2-Zh-hNk"/>
                                     <constraint firstAttribute="bottom" secondItem="JJ9-FO-tAo" secondAttribute="bottom" constant="20" id="kBs-xU-K3T"/>
+                                    <constraint firstAttribute="trailing" secondItem="sw6-cw-xBc" secondAttribute="trailing" id="rf9-0j-5vL"/>
                                     <constraint firstItem="JJ9-FO-tAo" firstAttribute="leading" secondItem="e6Z-6e-Uua" secondAttribute="leading" constant="20" id="vVH-cE-D9o"/>
+                                    <constraint firstItem="sw6-cw-xBc" firstAttribute="top" secondItem="e6Z-6e-Uua" secondAttribute="top" id="vn8-t1-IAg"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1712,7 +1851,6 @@ design and code an iOS 11 app.</string>
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="58Y-AV-cZ1" firstAttribute="trailing" secondItem="e6Z-6e-Uua" secondAttribute="trailing" id="4gJ-B0-T22"/>
                             <constraint firstItem="I1G-t5-SuE" firstAttribute="leading" secondItem="58Y-AV-cZ1" secondAttribute="leading" id="6ME-7z-fn7"/>
@@ -1726,7 +1864,10 @@ design and code an iOS 11 app.</string>
                         <viewLayoutGuide key="safeArea" id="58Y-AV-cZ1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="Tab Bar/more" largeContentSizeImage="Tab Bar/more-accessible" selectedImage="Tab Bar/more-active" id="HgJ-wX-1Mg"/>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="dialogView" destination="JJ9-FO-tAo" id="HYb-8H-pa6"/>
+                        <outlet property="panToClose" destination="vFk-77-BtD" id="5Wc-mN-AIb"/>
                         <outlet property="progress1Label" destination="0jk-ws-HYl" id="ovX-bJ-zSW"/>
                         <outlet property="progress1View" destination="SOt-n1-kry" id="Ob2-8L-Blo"/>
                         <outlet property="progress2Label" destination="kIu-RM-Q12" id="qi9-cP-Dmf"/>
@@ -1737,6 +1878,24 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Isn-DJ-cxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="d4R-OG-YpT" customClass="AmbienceObject" customModule="Ambience">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="contrastAvailable" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="invertLabel" value="Dark Mode"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="regularLabel" value="Off"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="viewController" destination="7ba-eV-iRr" id="IFc-aq-naB"/>
+                    </connections>
+                </customObject>
+                <customObject id="vFk-77-BtD" customClass="InteractionPanToClose" customModule="DesignCodeApp" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dialogView" destination="JJ9-FO-tAo" id="Mv3-Tv-WQ5"/>
+                        <outlet property="scrollView" destination="e6Z-6e-Uua" id="Bn7-8g-M0O"/>
+                        <outlet property="viewController" destination="7ba-eV-iRr" id="cSK-vY-rIk"/>
+                        <outlet property="visualEffectView" destination="I1G-t5-SuE" id="zzb-8q-EFH"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="5156" y="-469"/>
         </scene>
@@ -1749,8 +1908,12 @@ design and code an iOS 11 app.</string>
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <outlet property="delegate" destination="4iw-xL-uYZ" id="pKT-r9-Cfw"/>
                         <segue destination="Qnb-f9-fqH" kind="relationship" relationship="viewControllers" id="PbR-Rb-1Cp"/>
                         <segue destination="JdK-0e-h5A" kind="relationship" relationship="viewControllers" id="f5I-Db-C2F"/>
                         <segue destination="mC4-Gt-UQD" kind="relationship" relationship="viewControllers" id="CCi-mP-zKk"/>
@@ -1759,6 +1922,7 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7De-5C-Oqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="4iw-xL-uYZ" customClass="PresentMoreViewController" customModule="DesignCodeApp" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="3540" y="-1351"/>
         </scene>
