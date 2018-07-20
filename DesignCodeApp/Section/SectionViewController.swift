@@ -14,9 +14,10 @@ class SectionViewController: UIViewController {
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
-    var section: [String: String]!
-    var sections: [[String: String]]!
+    var section: Section!
+    var sections: Array<Section>!
     var indexPath: IndexPath!
+    
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverView: UIView!
@@ -26,10 +27,10 @@ class SectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = section["title"]
-        captionLabel.text = section["caption"]
-        bodyLabel.text = section["body"]
-        coverImageView.image = UIImage(named: section["image"]!)
+        titleLabel.text = section.title
+        captionLabel.text = section.caption
+        bodyLabel.text = section.body
+        coverImageView.image = UIImage(named: section.imageName)
         progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
     }
     

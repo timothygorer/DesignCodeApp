@@ -10,7 +10,9 @@ import UIKit
 
 class BookmarksTableViewController : UITableViewController {
 
-    var bookmarks : Array<Dictionary<String,String>> = allBookmarks
+    var bookmarks : Array<Bookmark> = ContentAPI.shared.bookmarks
+    
+    var sections : Array<Section> = ContentAPI.shared.sections
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -42,11 +44,11 @@ class BookmarksTableViewController : UITableViewController {
 
         let bookmark = bookmarks[indexPath.row]
 
-        cell.chapterTitleLabel.text = bookmark["section"]!.uppercased()
-        cell.titleLabel.text = bookmark["part"]
-        cell.bodyLabel.text = bookmark["content"]
-        cell.chapterNumberLabel.text = bookmark["chapter"]
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + bookmark["type"]!)
+        cell.chapterTitleLabel.text = bookmark.sectionTitle.uppercased()
+        cell.titleLabel.text = bookmark.partHeading
+        cell.bodyLabel.text = bookmark.content
+        cell.chapterNumberLabel.text = bookmark.chapterNumber
+        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (bookmark.type?.rawValue ?? "text"))
 
         return cell
     }

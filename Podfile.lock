@@ -10,6 +10,13 @@ DEPENDENCIES:
   - Spring
   - TPKeyboardAvoiding
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Ambience
+    - MKRingProgressView
+    - Spring
+    - TPKeyboardAvoiding
+
 SPEC CHECKSUMS:
   Ambience: 7b65da120d270b6a2a2591a3e2ab08871363f43d
   MKRingProgressView: fbcfe6e5485404fc4e4bc3becbed4a1c8c7df715
@@ -18,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e1794979cbd2b78eed33ef224b765d9505074332
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
