@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,7 +23,7 @@ class HomeViewController: UIViewController {
 
     let presentSectionViewController = PresentSectionViewController()
     
-    var sections : Array<Section> = { return CoreDataManger.shared.sections }()
+    var sections : Results<Section> { return RealmManager.sections }
     
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
@@ -126,7 +127,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        cell.coverImageView.image = UIImage(named: section.imageName!)
+        cell.coverImageView.image = UIImage(named: section.imageName)
         
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         

@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class BookmarksTableViewController : UITableViewController {
 
-    var bookmarks : Array<Bookmark> = { CoreDataManger.shared.bookmarks }()
-    
-    var sections : Array<Section> = { CoreDataManger.shared.sections }()
+    var bookmarks : Results<Bookmark> { return RealmManager.bookmarks }
+
+    var sections : Results<Section> { return RealmManager.sections }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -44,14 +45,14 @@ class BookmarksTableViewController : UITableViewController {
 
         let bookmark = bookmarks[indexPath.row]
         
-        let part = bookmark.part!
-        let section = bookmark.section!
+        let section = bookmark.section
+        let part = bookmark.part
 
-        cell.chapterTitleLabel.text = section.title!.uppercased()
-        cell.titleLabel.text = part.title
-        cell.bodyLabel.text = part.content
-        cell.chapterNumberLabel.text = section.chapterNumber
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (part.type ?? "text"))
+        cell.chapterTitleLabel.text = section?.title.uppercased()
+        cell.titleLabel.text = part?.title
+        cell.bodyLabel.text = part?.content
+        cell.chapterNumberLabel.text = section?.chapterNumber
+        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + (part!.typeName))
 
         return cell
     }
@@ -60,12 +61,11 @@ class BookmarksTableViewController : UITableViewController {
         if editingStyle == .delete {
             tableView.beginUpdates()
             let bookmark = bookmarks[indexPath.row]
-            CoreDataManger.shared.remove(bookmark)
+            RealmManager.remove(bookmark)
             tableView.deleteRows(at: [indexPath], with: .top)
             tableView.endUpdates()
         }
     }
-
 }
 
 public extension UIViewController {

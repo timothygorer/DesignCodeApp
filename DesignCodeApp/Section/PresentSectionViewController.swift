@@ -15,7 +15,7 @@ class PresentSectionViewController : NSObject, UIViewControllerAnimatedTransitio
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
 
-        return 5
+        return 1
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -56,7 +56,7 @@ class PresentSectionViewController : NSObject, UIViewControllerAnimatedTransitio
         destination.subheadVisualEffectView.alpha = 0
         destination.subheadVisualEffectView.transform = removeFromViewTransform
 
-        let animator = UIViewPropertyAnimator(duration: 5, dampingRatio: 0.7) {
+        let animator = UIViewPropertyAnimator(duration: 1, dampingRatio: 0.7) {
 
             // Final state
 

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		01965BB52103209100227E53 /* Parts.json in Resources */ = {isa = PBXBuildFile; fileRef = 01965BB42103209100227E53 /* Parts.json */; };
+		01965BB721039FD200227E53 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01965BB621039FD200227E53 /* RealmManager.swift */; };
 		01D947802102840900389737 /* ContentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9477F2102840900389737 /* ContentAPI.swift */; };
 		01D947822102842B00389737 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D947812102842B00389737 /* Sections.json */; };
 		01D94784210289F500389737 /* Bookmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D94783210289F500389737 /* Bookmarks.json */; };
-		01D9478821029A5B00389737 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9478721029A5B00389737 /* CoreDataManger.swift */; };
 		09D842196496D3BC05613910 /* Pods_DesignCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */; };
 		790D67B72022509900BBD0A3 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */; };
 		790D67B920226B8300BBD0A3 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */; };
@@ -53,10 +53,10 @@
 
 /* Begin PBXFileReference section */
 		01965BB42103209100227E53 /* Parts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parts.json; sourceTree = "<group>"; };
+		01965BB621039FD200227E53 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		01D9477F2102840900389737 /* ContentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAPI.swift; sourceTree = "<group>"; };
 		01D947812102842B00389737 /* Sections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sections.json; sourceTree = "<group>"; };
 		01D94783210289F500389737 /* Bookmarks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bookmarks.json; sourceTree = "<group>"; };
-		01D9478721029A5B00389737 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 		379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -201,10 +201,10 @@
 				7932CE7E200BDD810006980E /* ChaptersViewController.swift */,
 				7932CE82200BE1890006980E /* BookmarksTableViewController.swift */,
 				01D9477F2102840900389737 /* ContentAPI.swift */,
+				01965BB621039FD200227E53 /* RealmManager.swift */,
 				01D947812102842B00389737 /* Sections.json */,
 				01965BB42103209100227E53 /* Parts.json */,
 				01D94783210289F500389737 /* Bookmarks.json */,
-				01D9478721029A5B00389737 /* CoreDataManger.swift */,
 				7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */,
 				9688C5C41FE72BF000BCD68A /* Data.swift */,
 				79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */,
@@ -332,6 +332,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Ambience/Ambience.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
@@ -339,6 +341,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ambience.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
@@ -357,7 +361,6 @@
 				9698CD211FBB5DE000501C47 /* HomeViewController.swift in Sources */,
 				7999452A2018F867003AFA48 /* PurchaseViewController.swift in Sources */,
 				790D67B920226B8300BBD0A3 /* ExerciseDialogViewController.swift in Sources */,
-				01D9478821029A5B00389737 /* CoreDataManger.swift in Sources */,
 				7932CE87200BE9080006980E /* MoreViewController.swift in Sources */,
 				9688C5C51FE72BF000BCD68A /* Data.swift in Sources */,
 				79AACD5F201F52B400F5D2AA /* LoginViewController.swift in Sources */,
@@ -379,6 +382,7 @@
 				7932CE83200BE1890006980E /* BookmarksTableViewController.swift in Sources */,
 				9698CD271FBB5DE000501C47 /* Model.xcdatamodeld in Sources */,
 				7932CE7F200BDD810006980E /* ChaptersViewController.swift in Sources */,
+				01965BB721039FD200227E53 /* RealmManager.swift in Sources */,
 				7932CE81200BE1390006980E /* BookmarkTableViewCell.swift in Sources */,
 				792AEAE52046F3F900E4F2E5 /* BenefitsViewController.swift in Sources */,
 				79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */,
