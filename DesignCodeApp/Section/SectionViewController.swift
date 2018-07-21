@@ -30,7 +30,7 @@ class SectionViewController: UIViewController {
         titleLabel.text = section.title
         captionLabel.text = section.caption
         bodyLabel.text = section.body
-        coverImageView.image = UIImage(named: section.imageName)
+        coverImageView.image = UIImage(named: section.imageName!)
         progressLabel.text = "\(indexPath.row+1) / \(sections.count)"
     }
     

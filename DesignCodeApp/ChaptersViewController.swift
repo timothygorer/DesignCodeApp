@@ -12,7 +12,7 @@ class ChaptersViewController: UIViewController {
 
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     
-    var sections : Array<Section> = ContentAPI.shared.sections
+    var sections : Array<Section> = { CoreDataManger.shared.sections }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ extension ChaptersViewController : UICollectionViewDelegate, UICollectionViewDat
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        cell.coverImageView.image = UIImage(named: section.imageName)
+        cell.coverImageView.image = UIImage(named: section.imageName!)
         
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         
