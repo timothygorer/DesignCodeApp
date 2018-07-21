@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01965BB52103209100227E53 /* Parts.json in Resources */ = {isa = PBXBuildFile; fileRef = 01965BB42103209100227E53 /* Parts.json */; };
 		01D947802102840900389737 /* ContentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9477F2102840900389737 /* ContentAPI.swift */; };
 		01D947822102842B00389737 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D947812102842B00389737 /* Sections.json */; };
 		01D94784210289F500389737 /* Bookmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D94783210289F500389737 /* Bookmarks.json */; };
-		01D947862102934200389737 /* Parts.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D947852102934200389737 /* Parts.json */; };
 		01D9478821029A5B00389737 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9478721029A5B00389737 /* CoreDataManger.swift */; };
 		09D842196496D3BC05613910 /* Pods_DesignCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */; };
 		790D67B72022509900BBD0A3 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */; };
@@ -52,10 +52,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01965BB42103209100227E53 /* Parts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parts.json; sourceTree = "<group>"; };
 		01D9477F2102840900389737 /* ContentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAPI.swift; sourceTree = "<group>"; };
 		01D947812102842B00389737 /* Sections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sections.json; sourceTree = "<group>"; };
 		01D94783210289F500389737 /* Bookmarks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bookmarks.json; sourceTree = "<group>"; };
-		01D947852102934200389737 /* Parts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parts.json; sourceTree = "<group>"; };
 		01D9478721029A5B00389737 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 		379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 				7932CE82200BE1890006980E /* BookmarksTableViewController.swift */,
 				01D9477F2102840900389737 /* ContentAPI.swift */,
 				01D947812102842B00389737 /* Sections.json */,
-				01D947852102934200389737 /* Parts.json */,
+				01965BB42103209100227E53 /* Parts.json */,
 				01D94783210289F500389737 /* Bookmarks.json */,
 				01D9478721029A5B00389737 /* CoreDataManger.swift */,
 				7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */,
@@ -297,7 +297,7 @@
 				9698CD291FBB5DE000501C47 /* Assets.xcassets in Resources */,
 				01D947822102842B00389737 /* Sections.json in Resources */,
 				792AEAF820473C5D00E4F2E5 /* WebViewController.storyboard in Resources */,
-				01D947862102934200389737 /* Parts.json in Resources */,
+				01965BB52103209100227E53 /* Parts.json in Resources */,
 				9698CD241FBB5DE000501C47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
