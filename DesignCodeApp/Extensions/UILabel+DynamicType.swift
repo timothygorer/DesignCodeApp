@@ -11,9 +11,9 @@ import UIKit
 @available(iOS 11.0, *)
 
 fileprivate enum TextStyles : String {
-
+    
     case body, callout, caption1, caption2, footnote, headline, subheadline, title1, title2, title3, largeTitle
-
+    
     var textStyle : UIFontTextStyle {
         switch self {
         case .body: return .body
@@ -33,15 +33,15 @@ fileprivate enum TextStyles : String {
 
 @available(iOS 11.0, *)
 extension UILabel {
-
+    
     @IBInspectable var scaledFont : String {
         set (value) {
             guard let style = TextStyles(rawValue: value)?.textStyle else { return }
-
+            
             let scaledFont = UIFontMetrics(forTextStyle: style).scaledFont(for: font)
-
+            
             font = scaledFont
-
+            
             adjustsFontForContentSizeCategory = true
         }
         get { return "" }

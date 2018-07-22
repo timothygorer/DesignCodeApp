@@ -2,13 +2,58 @@
 //  ContentAPI.swift
 //  DesignCodeApp
 //
-//  Created by Tim Gorer on 7/20/18.
+//  Created by Tiago Mergulhão on 27/03/18.
 //  Copyright © 2018 Meng To. All rights reserved.
 //
 
 import RealmSwift
 
+struct Content : Decodable {
+    var chapters : Array<Chapter>
+    var version : Int
+    
+    enum CodingKeys : String, CodingKey {
+        case version
+        case chapters = "content"
+    }
+}
+
+extension Content : Resource {
+    
+    static var path : String { return "content" }
+    static var httpMethod : HTTPMethod { return .get }
+    static var body : Data? { return nil }
+}
+
+class Chapter : Object, Decodable {
+    @objc dynamic var id : String = ""
+    @objc dynamic var title : String = ""
+    
+    var sections : List<Section> = List<Section>()
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, title, sections
+    }
+    
+    override static func primaryKey() -> String? { return "id" }
+    
+    convenience required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.init()
+        
+        id = try container.decode(String.self, forKey: .id)
+        title = try container.decode(String.self, forKey: .title)
+        
+        let sectionsArray = try container.decode(Array<Section>.self, forKey: .sections)
+        
+        sections = List<Section>()
+        sections.append(objectsIn: sectionsArray)
+    }
+}
+
 class Bookmark : Object, Decodable {
+    
     @objc dynamic var section : Section?
     @objc dynamic var sectionId : String = ""
     
@@ -16,91 +61,81 @@ class Bookmark : Object, Decodable {
     @objc dynamic var partId : String = ""
 }
 
-class Part : Object, Decodable {
-    enum PartType : String {
-        case text, image, video, code
-    }
-    
-    var type : PartType?
-    
-    @objc dynamic var id : String = ""
-    @objc dynamic var title : String = ""
-    @objc dynamic var content : String = ""
-    @objc dynamic var typeName : String = ""
-    
-    @objc dynamic var section : Section?
-    
-    override static func primaryKey() -> String? { return "id" } // by getting the primary key, realm is able to reference the "id" variable using objective c key-value coding.
-
-    enum CodingKeys : String, CodingKey {
-        case content, id, title
-        case typeName = "type"
-    }
-}
-
 class Section : Object, Decodable {
+    
     @objc dynamic var id : String = ""
+    @objc dynamic var chapterId : String = ""
+    @objc dynamic var order : String = ""
+    @objc dynamic var slug : String = ""
     @objc dynamic var title : String = ""
     @objc dynamic var caption : String = ""
     @objc dynamic var body : String = ""
-    @objc dynamic var imageName : String = ""
-    @objc dynamic var chapterNumber : String = ""
     
-    @objc dynamic var publishDate : Date?
+    @objc dynamic var image : String = ""
     
-    var parts : List<Part>? = List<Part>()
+    var imageURL : URL? { return URL(string: image) }
     
-    enum CodingKeys : String, CodingKey {
-        case id, title, caption, body, imageName, chapterNumber, publishDate, parts
+    var parts : List<Part> = List<Part>()
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, title, caption, body, chapterId, order, slug, image
+        case parts = "contents"
     }
     
-    override static func primaryKey() -> String? { return "id" } // by getting the primary key, realm is able to reference the "id" variable using objective c key-value coding.
+    override static func primaryKey() -> String? { return "id" }
     
-    // because we are using a type not defined in Codable and won't be coded from JSON file, let's set an init from decoder:
     convenience required init(from decoder: Decoder) throws {
-        self.init()
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.init()
         
         id = try container.decode(String.self, forKey: .id)
         title = try container.decode(String.self, forKey: .title)
         caption = try container.decode(String.self, forKey: .caption)
         body = try container.decode(String.self, forKey: .body)
-        imageName = try container.decode(String.self, forKey: .imageName)
-        chapterNumber = try container.decode(String.self, forKey: .chapterNumber)
+        image = try container.decode(String.self, forKey: .image)
         
-        publishDate = try container.decode(Date.self, forKey: .publishDate)
+        let partsArray = try container.decode(Array<Part>.self, forKey: .parts)
         
         parts = List<Part>()
+        parts.append(objectsIn: partsArray)
     }
 }
 
+extension List : Decodable {
+    public convenience init(from decoder: Decoder) throws {
+        self.init()
+    }
+}
+
+enum PartType : String {
+    case text, image, video, code
+}
+
+class Part : Object, Decodable {
+    
+    @objc dynamic var id : String = ""
+    @objc dynamic var sectionId : String = ""
+    @objc dynamic var order : String = ""
+    @objc dynamic var title : String = ""
+    @objc dynamic var subhead : String = ""
+    @objc dynamic var body : String = ""
+    
+    @objc dynamic var image : String = ""
+    
+    var imageURL : URL? { return URL(string: image) }
+    
+    @objc dynamic var imageHeight : String = ""
+    @objc dynamic var imageWidth : String = ""
+    
+    override static func primaryKey() -> String? { return "id" }
+}
+
 class ContentAPI {
+    
     static var shared : ContentAPI = ContentAPI()
     
-    lazy var bookmarks : Array<Bookmark> = {
-        return load(into: Array<Bookmark>.self, resource: "Bookmarks") ?? []
-    }()
+    lazy var bookmarks : Array<Bookmark> = []
     
-    lazy var parts : Array<Part> = {
-        return load(into: Array<Part>.self, resource: "Parts") ?? []
-    }()
-    
-    lazy var sections : Array<Section> = {
-        return load(into: Array<Section>.self, resource: "Sections") ?? []
-    }()
-    
-    // transforms a resource of a given type into that T type
-    func load<T : Decodable>(into swiftType: T.Type, resource : String, ofType type : String = "json") -> T? {
-        let path = Bundle.main.path(forResource: resource, ofType: type)
-        let url = URL(fileURLWithPath: path!)
-        
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .secondsSince1970
-        
-        return try! decoder.decode(swiftType.self, from : data)
-    }
+    static let baseURL = URL(string: "http://localhost:3000")!
 }

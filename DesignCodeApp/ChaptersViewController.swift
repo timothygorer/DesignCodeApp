@@ -34,9 +34,9 @@ extension ChaptersViewController : UICollectionViewDelegate, UICollectionViewDat
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        print("imageName " + section.imageName)
-        cell.coverImageView.image = UIImage(named: section.imageName)
-        
+        print("imageName " + section.image)
+        cell.coverImageView.setImage(from: section.imageURL!)
+
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         
         return cell

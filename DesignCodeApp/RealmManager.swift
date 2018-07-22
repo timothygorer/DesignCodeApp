@@ -13,41 +13,19 @@ class RealmManager {
     static var realm = try! Realm()
     
     static var bookmarks : Results<Bookmark> { return realm.objects(Bookmark.self) }
-    
+
     static var sections : Results<Section> { return realm.objects(Section.self) }
-    
-    class func remove (_ object : Object) {
-        try! realm.write {
-            realm.delete(object)
-        }
+
+    class func remove(_ bookmark : Bookmark) {
+        
+        try! realm.write { realm.delete(bookmark) }
     }
     
-    class func loadFromData () {
+    class func updateContent () {
         
-        let contentAPI = ContentAPI.shared
-        
-        let bookmarks = contentAPI.bookmarks
-        let sections = contentAPI.sections
-        let parts = contentAPI.parts
-        
-        sections.forEach { $0.parts?.append(objectsIn: parts) }
-        
-        bookmarks.forEach { (bookmark) in
-            bookmark.section = sections
-                .filter { $0.id == bookmark.sectionId }
-                .first
+        Content.load { (response : Response<Content>) in
             
-            bookmark.part = parts
-                .filter { $0.id == bookmark.partId }
-                .first
-        }
-        
-        try! realm.write {
-            realm.add(sections, update: true)
-        }
-        
-        try! realm.write {
-            realm.add(bookmarks)
+            try! realm.write { realm.add(response.data.chapters, update: true) }
         }
     }
 }

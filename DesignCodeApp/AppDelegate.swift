@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .contrast(lower: nil),
         ])
         
-        RealmManager.loadFromData() // we already have data loaded
+        RealmManager.updateContent() // we already have data loaded
         
         return true
     }

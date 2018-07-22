@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01965BB52103209100227E53 /* Parts.json in Resources */ = {isa = PBXBuildFile; fileRef = 01965BB42103209100227E53 /* Parts.json */; };
+		0180F7592105176000B61A47 /* String+HTMLDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180F7582105176000B61A47 /* String+HTMLDecoding.swift */; };
+		0180F75B2105178B00B61A47 /* UIColor+Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180F75A2105178B00B61A47 /* UIColor+Hexadecimal.swift */; };
+		0180F75D210517A400B61A47 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180F75C210517A400B61A47 /* UIImageView+Kingfisher.swift */; };
+		0180F75F210517B200B61A47 /* UILabel+DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180F75E210517B200B61A47 /* UILabel+DynamicType.swift */; };
+		0180F761210517D400B61A47 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0180F760210517D400B61A47 /* UILabel+Inspectable.swift */; };
 		01965BB721039FD200227E53 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01965BB621039FD200227E53 /* RealmManager.swift */; };
+		01965BB92103F82000227E53 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01965BB82103F82000227E53 /* Resource.swift */; };
 		01D947802102840900389737 /* ContentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9477F2102840900389737 /* ContentAPI.swift */; };
-		01D947822102842B00389737 /* Sections.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D947812102842B00389737 /* Sections.json */; };
-		01D94784210289F500389737 /* Bookmarks.json in Resources */ = {isa = PBXBuildFile; fileRef = 01D94783210289F500389737 /* Bookmarks.json */; };
 		09D842196496D3BC05613910 /* Pods_DesignCodeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */; };
 		790D67B72022509900BBD0A3 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */; };
 		790D67B920226B8300BBD0A3 /* ExerciseDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D67B820226B8300BBD0A3 /* ExerciseDialogViewController.swift */; };
@@ -34,9 +37,7 @@
 		799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799945272018E9B3003AFA48 /* InteractionPanToClose.swift */; };
 		7999452A2018F867003AFA48 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799945292018F867003AFA48 /* PurchaseViewController.swift */; };
 		79AACD5F201F52B400F5D2AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AACD5E201F52B400F5D2AA /* LoginViewController.swift */; };
-		79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */; };
 		79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */; };
-		79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */; };
 		79F7A71020208FB600C54511 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */; };
 		9688C5C51FE72BF000BCD68A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688C5C41FE72BF000BCD68A /* Data.swift */; };
 		9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */; };
@@ -52,11 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01965BB42103209100227E53 /* Parts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Parts.json; sourceTree = "<group>"; };
+		0180F7582105176000B61A47 /* String+HTMLDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecoding.swift"; sourceTree = "<group>"; };
+		0180F75A2105178B00B61A47 /* UIColor+Hexadecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexadecimal.swift"; sourceTree = "<group>"; };
+		0180F75C210517A400B61A47 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		0180F75E210517B200B61A47 /* UILabel+DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicType.swift"; sourceTree = "<group>"; };
+		0180F760210517D400B61A47 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		01965BB621039FD200227E53 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		01965BB82103F82000227E53 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		01D9477F2102840900389737 /* ContentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAPI.swift; sourceTree = "<group>"; };
-		01D947812102842B00389737 /* Sections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sections.json; sourceTree = "<group>"; };
-		01D94783210289F500389737 /* Bookmarks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bookmarks.json; sourceTree = "<group>"; };
 		379C1F7042FC377720DF6981 /* Pods_DesignCodeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesignCodeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A329893A4BEBAA8AA387C6 /* Pods-DesignCodeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -80,9 +84,7 @@
 		799945272018E9B3003AFA48 /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
 		799945292018F867003AFA48 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		79AACD5E201F52B400F5D2AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		79E0A7FC201A728100FCCD58 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
-		79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicType.swift"; sourceTree = "<group>"; };
 		79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		813966B81AF159877D915B69 /* Pods-DesignCodeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCodeApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp.release.xcconfig"; sourceTree = "<group>"; };
 		9688C5C41FE72BF000BCD68A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -112,6 +114,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01965BBA21047CED00227E53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0180F7582105176000B61A47 /* String+HTMLDecoding.swift */,
+				0180F75A2105178B00B61A47 /* UIColor+Hexadecimal.swift */,
+				0180F75C210517A400B61A47 /* UIImageView+Kingfisher.swift */,
+				0180F75E210517B200B61A47 /* UILabel+DynamicType.swift */,
+				0180F760210517D400B61A47 /* UILabel+Inspectable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1539698DA2D0280680DFB68F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,32 +208,29 @@
 		9698CD1D1FBB5DE000501C47 /* DesignCodeApp */ = {
 			isa = PBXGroup;
 			children = (
-				79F163E5204F2A5600F58C8F /* UILabel+DynamicType.swift */,
 				9698CD1E1FBB5DE000501C47 /* AppDelegate.swift */,
 				9698CD201FBB5DE000501C47 /* HomeViewController.swift */,
 				9688C5C81FE72D3200BCD68A /* SectionCollectionViewCell.swift */,
 				7932CE7E200BDD810006980E /* ChaptersViewController.swift */,
 				7932CE82200BE1890006980E /* BookmarksTableViewController.swift */,
 				01D9477F2102840900389737 /* ContentAPI.swift */,
+				01965BB82103F82000227E53 /* Resource.swift */,
 				01965BB621039FD200227E53 /* RealmManager.swift */,
-				01D947812102842B00389737 /* Sections.json */,
-				01965BB42103209100227E53 /* Parts.json */,
-				01D94783210289F500389737 /* Bookmarks.json */,
 				7932CE80200BE1390006980E /* BookmarkTableViewCell.swift */,
 				9688C5C41FE72BF000BCD68A /* Data.swift */,
-				79E0A7FA201A71B700FCCD58 /* UILabel+Inspectable.swift */,
 				7932CE86200BE9080006980E /* MoreViewController.swift */,
 				79F7A70F20208FB600C54511 /* ExercisesTableViewController.swift */,
 				790D67B62022509900BBD0A3 /* ExerciseTableViewCell.swift */,
 				797EEE8E202368F800123433 /* QuestionCollectionViewCell.swift */,
 				797EEE90202371BE00123433 /* ScoreCollectionViewCell.swift */,
+				7919265820507EC0001A2D5B /* PresentMoreViewController.swift */,
+				7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */,
 				792AEAF5204736E500E4F2E5 /* Dialog */,
 				792AEAF62047376500E4F2E5 /* Section */,
 				792AEAF22047366700E4F2E5 /* WebViewController */,
 				792AEAF32047368200E4F2E5 /* Embed */,
+				01965BBA21047CED00227E53 /* Extensions */,
 				9698CD221FBB5DE000501C47 /* Main.storyboard */,
-				7919265820507EC0001A2D5B /* PresentMoreViewController.swift */,
-				7919265A205142D3001A2D5B /* CATransform3D+Perspective.swift */,
 				9698CD2A1FBB5DE000501C47 /* LaunchScreen.storyboard */,
 				9698CD281FBB5DE000501C47 /* Assets.xcassets */,
 				9698CD2D1FBB5DE000501C47 /* Info.plist */,
@@ -289,15 +300,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D94784210289F500389737 /* Bookmarks.json in Resources */,
 				792AEAEB2047358200E4F2E5 /* Embed.storyboard in Resources */,
 				9698CD2C1FBB5DE000501C47 /* LaunchScreen.storyboard in Resources */,
 				792AEAEC2047358A00E4F2E5 /* Dialog.storyboard in Resources */,
 				792AEAF12047361100E4F2E5 /* Section.storyboard in Resources */,
 				9698CD291FBB5DE000501C47 /* Assets.xcassets in Resources */,
-				01D947822102842B00389737 /* Sections.json in Resources */,
 				792AEAF820473C5D00E4F2E5 /* WebViewController.storyboard in Resources */,
-				01965BB52103209100227E53 /* Parts.json in Resources */,
 				9698CD241FBB5DE000501C47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +339,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCodeApp/Pods-DesignCodeApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Ambience/Ambience.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -340,6 +349,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ambience.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -364,17 +374,20 @@
 				7932CE87200BE9080006980E /* MoreViewController.swift in Sources */,
 				9688C5C51FE72BF000BCD68A /* Data.swift in Sources */,
 				79AACD5F201F52B400F5D2AA /* LoginViewController.swift in Sources */,
-				79F163E6204F2A5600F58C8F /* UILabel+DynamicType.swift in Sources */,
 				9698CD1F1FBB5DE000501C47 /* AppDelegate.swift in Sources */,
 				96ECA89B1FDF177400DE9E40 /* SectionViewController.swift in Sources */,
+				0180F7592105176000B61A47 /* String+HTMLDecoding.swift in Sources */,
 				7919265920507EC0001A2D5B /* PresentMoreViewController.swift in Sources */,
 				01D947802102840900389737 /* ContentAPI.swift in Sources */,
+				0180F75F210517B200B61A47 /* UILabel+DynamicType.swift in Sources */,
 				797EEE8F202368F800123433 /* QuestionCollectionViewCell.swift in Sources */,
 				96ABF7311FEEA64300AF4146 /* TestimonialViewController.swift in Sources */,
 				79E0A7FD201A728100FCCD58 /* DiscountViewController.swift in Sources */,
 				7919265B205142D3001A2D5B /* CATransform3D+Perspective.swift in Sources */,
 				797EEE91202371BE00123433 /* ScoreCollectionViewCell.swift in Sources */,
 				9688C5C91FE72D3200BCD68A /* SectionCollectionViewCell.swift in Sources */,
+				0180F75B2105178B00B61A47 /* UIColor+Hexadecimal.swift in Sources */,
+				01965BB92103F82000227E53 /* Resource.swift in Sources */,
 				799945282018E9B3003AFA48 /* InteractionPanToClose.swift in Sources */,
 				96ABF7331FEF113100AF4146 /* TestimonialCollectionViewCell.swift in Sources */,
 				79528324200FD2F0005F248C /* PresentSectionViewController.swift in Sources */,
@@ -383,10 +396,11 @@
 				9698CD271FBB5DE000501C47 /* Model.xcdatamodeld in Sources */,
 				7932CE7F200BDD810006980E /* ChaptersViewController.swift in Sources */,
 				01965BB721039FD200227E53 /* RealmManager.swift in Sources */,
+				0180F761210517D400B61A47 /* UILabel+Inspectable.swift in Sources */,
 				7932CE81200BE1390006980E /* BookmarkTableViewCell.swift in Sources */,
 				792AEAE52046F3F900E4F2E5 /* BenefitsViewController.swift in Sources */,
-				79E0A7FB201A71B700FCCD58 /* UILabel+Inspectable.swift in Sources */,
 				79F7A71020208FB600C54511 /* ExercisesTableViewController.swift in Sources */,
+				0180F75D210517A400B61A47 /* UIImageView+Kingfisher.swift in Sources */,
 				792AEAE72046F52400E4F2E5 /* BenefitCollectionViewCell.swift in Sources */,
 				790D67B72022509900BBD0A3 /* ExerciseTableViewCell.swift in Sources */,
 			);
