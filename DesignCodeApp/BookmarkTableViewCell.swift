@@ -32,4 +32,18 @@ class BookmarkTableViewCell : UITableViewCell {
             }
         }
     }
+    
+    func configure(for part : Part, with section : Section) {
+        if part.title == "" {
+            titleLabel.text = part.subhead
+        } else {
+            titleLabel.text = part.title
+        }
+        
+        chapterTitleLabel.text = section.title.uppercased()
+        bodyLabel.attributedText = part.body.wrappedIntoStyle.htmlToAttributedString
+        chapterNumberLabel.text = section.chapterId
+        badgeImageView.image = UIImage(named: "Bookmarks/" + "text")
+        
+    }
 }

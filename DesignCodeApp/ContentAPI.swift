@@ -52,15 +52,6 @@ class Chapter : Object, Decodable {
     }
 }
 
-class Bookmark : Object, Decodable {
-    
-    @objc dynamic var section : Section?
-    @objc dynamic var sectionId : String = ""
-    
-    @objc dynamic var part : Part?
-    @objc dynamic var partId : String = ""
-}
-
 class Section : Object, Decodable {
     
     @objc dynamic var id : String = ""
@@ -122,6 +113,8 @@ class Part : Object, Decodable {
     @objc dynamic var body : String = ""
     
     @objc dynamic var image : String = ""
+    
+    @objc dynamic var bookmarkId : String = ""
     
     var imageURL : URL? { return URL(string: image) }
     

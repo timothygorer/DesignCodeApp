@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var heroView: UIView!
     @IBOutlet weak var bookView: UIView!
-    @IBOutlet weak var chapter1CollectionView: UICollectionView!
     var isStatusBarHidden = false
 
     let presentSectionViewController = PresentSectionViewController()
@@ -76,6 +75,7 @@ class HomeViewController: UIViewController {
             let destination = segue.destination as! ChapterViewController
             destination.chapter = RealmManager.chapter(withId: "1")
             destination.view.translatesAutoresizingMaskIntoConstraints = false
+            destination.delegate = self
             
         case "HomeToSection":
             let destination = segue.destination as! SectionViewController
@@ -125,9 +125,10 @@ extension HomeViewController : UIViewControllerTransitioningDelegate {
 extension HomeViewController : ChapterCollectionDelegate {
     
     func didTap(cell: SectionCollectionViewCell, on collectionView: UICollectionView, for section: Section, with transform: CATransform3D) {
+        print("called didTap")
         let indexPath = collectionView.indexPath(for: cell)!
-        let attributes = chapter1CollectionView.layoutAttributesForItem(at: indexPath)!
-        let frame = chapter1CollectionView.convert(attributes.frame, to: view)
+        let attributes = collectionView.layoutAttributesForItem(at: indexPath)!
+        let frame = collectionView.convert(attributes.frame, to: view)
         presentSectionViewController.cellFrame = frame
         presentSectionViewController.cellTransform = transform
         

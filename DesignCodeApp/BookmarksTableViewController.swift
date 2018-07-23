@@ -44,15 +44,12 @@ class BookmarksTableViewController : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarkCell") as! BookmarkTableViewCell
 
         let bookmark = bookmarks[indexPath.row]
+        guard let part = RealmManager.part(for: bookmark),
+            let section = RealmManager.section(for: part) else {
+                return cell
+        }
         
-        let section = bookmark.section!
-        let part = bookmark.part!
-
-        cell.chapterTitleLabel.text = section.title.uppercased()
-        cell.titleLabel.text = part.title
-        cell.bodyLabel.text = part.body
-        cell.chapterNumberLabel.text = section.chapterId
-        cell.badgeImageView.image = UIImage(named: "Bookmarks/" + "text")
+        cell.configure(for: part, with: section)
 
         return cell
     }
@@ -61,6 +58,7 @@ class BookmarksTableViewController : UITableViewController {
         if editingStyle == .delete {
             tableView.beginUpdates()
             let bookmark = bookmarks[indexPath.row]
+            Bookmarks.remove(bookmark).dataTask(completion: nil).resume()
             RealmManager.remove(bookmark)
             tableView.deleteRows(at: [indexPath], with: .top)
             tableView.endUpdates()

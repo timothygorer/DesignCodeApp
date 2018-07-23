@@ -28,6 +28,9 @@ class ChapterViewController: UIViewController {
 extension ChapterViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        guard chapter != nil else { return 0 }
+        
         if searchText.count == 0 {
             sections = RealmManager
                 .realm

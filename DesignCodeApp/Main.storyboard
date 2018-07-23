@@ -678,14 +678,11 @@ design and code an iOS 11 app.</string>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </visualEffectView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Here's your score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-Vz-Dvh" customClass="DesignableLabel" customModule="DesignCodeApp" customModuleProvider="target">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Here's your score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-Vz-Dvh" customClass="DesignableLabel" customModule="Spring">
                                                                                 <rect key="frame" x="20" y="20" width="263" height="18"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fitToWidth" value="YES"/>
-                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's your score:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uV-lE-0IW">
                                                                                 <rect key="frame" x="20" y="38" width="263" height="36"/>
@@ -693,14 +690,11 @@ design and code an iOS 11 app.</string>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="You took the exercise 3 times. Your average time is 30 seconds." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21M-cf-Hdt" customClass="DesignableLabel" customModule="DesignCodeApp" customModuleProvider="target">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="You took the exercise 3 times. Your average time is 30 seconds." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21M-cf-Hdt" customClass="DesignableLabel" customModule="Spring">
                                                                                 <rect key="frame" x="20" y="431.5" width="263" height="38.5"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fitToWidth" value="YES"/>
-                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-mv-Czf">
                                                                                 <rect key="frame" x="31" y="376.5" width="240" height="40"/>
@@ -711,7 +705,7 @@ design and code an iOS 11 app.</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
-                                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-qR-ldG" customClass="DesignableButton" customModule="DesignCodeApp" customModuleProvider="target">
+                                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-qR-ldG" customClass="DesignableButton" customModule="Spring">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -751,7 +745,7 @@ design and code an iOS 11 app.</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
-                                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-m9-ODB" customClass="DesignableButton" customModule="DesignCodeApp" customModuleProvider="target">
+                                                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-m9-ODB" customClass="DesignableButton" customModule="Spring">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -877,8 +871,8 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
-                                                                                        <state key="selected" image="icon-menu-check"/>
-                                                                                        <state key="highlighted" image="icon-menu-check"/>
+                                                                                        <state key="selected" image="Exercises-Uncheck"/>
+                                                                                        <state key="highlighted" image="Exercises-Uncheck"/>
                                                                                         <connections>
                                                                                             <action selector="didTapQuestionButton:" destination="3uT-qp-tEC" eventType="touchUpInside" id="tD1-O5-HQz"/>
                                                                                         </connections>
@@ -891,8 +885,8 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
-                                                                                        <state key="selected" image="icon-menu-check"/>
-                                                                                        <state key="highlighted" image="icon-menu-check"/>
+                                                                                        <state key="selected" image="Exercises-Uncheck"/>
+                                                                                        <state key="highlighted" image="Exercises-Uncheck"/>
                                                                                         <connections>
                                                                                             <action selector="didTapQuestionButton:" destination="3uT-qp-tEC" eventType="touchUpInside" id="4KT-2X-1Mk"/>
                                                                                         </connections>
@@ -905,8 +899,8 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
-                                                                                        <state key="selected" image="icon-menu-check"/>
-                                                                                        <state key="highlighted" image="icon-menu-check"/>
+                                                                                        <state key="selected" image="Exercises-Uncheck"/>
+                                                                                        <state key="highlighted" image="Exercises-Uncheck"/>
                                                                                         <connections>
                                                                                             <action selector="didTapQuestionButton:" destination="3uT-qp-tEC" eventType="touchUpInside" id="z8R-lj-sWF"/>
                                                                                         </connections>
@@ -919,8 +913,8 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
-                                                                                        <state key="selected" image="icon-menu-check"/>
-                                                                                        <state key="highlighted" image="icon-menu-check"/>
+                                                                                        <state key="selected" image="Exercises-Uncheck"/>
+                                                                                        <state key="highlighted" image="Exercises-Uncheck"/>
                                                                                         <connections>
                                                                                             <action selector="didTapQuestionButton:" destination="3uT-qp-tEC" eventType="touchUpInside" id="0EI-3P-uHB"/>
                                                                                         </connections>
@@ -933,8 +927,8 @@ design and code an iOS 11 app.</string>
                                                                                         <state key="normal" title="Intuition, clarity and beauty" image="Exercises-Uncheck">
                                                                                             <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         </state>
-                                                                                        <state key="selected" image="icon-menu-check"/>
-                                                                                        <state key="highlighted" image="icon-menu-check"/>
+                                                                                        <state key="selected" image="Exercises-Uncheck"/>
+                                                                                        <state key="highlighted" image="Exercises-Uncheck"/>
                                                                                         <connections>
                                                                                             <action selector="didTapQuestionButton:" destination="3uT-qp-tEC" eventType="touchUpInside" id="DKM-rZ-9Yx"/>
                                                                                         </connections>
@@ -974,14 +968,11 @@ design and code an iOS 11 app.</string>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </visualEffectView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="iOS Design: 9 / 12 exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-gJ-Ys4" customClass="DesignableLabel" customModule="DesignCodeApp" customModuleProvider="target">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="iOS Design: 9 / 12 exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-gJ-Ys4" customClass="DesignableLabel" customModule="Spring">
                                                                                 <rect key="frame" x="20" y="20" width="263" height="18"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fitToWidth" value="YES"/>
-                                                                                </userDefinedRuntimeAttributes>
                                                                             </label>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1981,13 +1972,12 @@ design and code an iOS 11 app.</string>
         <image name="Tab Bar/more" width="30" height="8"/>
         <image name="Tab Bar/more-accessible" width="90" height="24"/>
         <image name="Tab Bar/more-active" width="30" height="8"/>
-        <image name="icon-menu-check" width="16" height="16"/>
         <image name="ios11" width="2880" height="1600"/>
         <image name="swift-wallpaper" width="5120" height="2880"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4PH-HO-Ljn"/>
         <segue reference="fhk-rx-D3d"/>
-        <segue reference="22V-ZA-hMz"/>
+        <segue reference="Abh-JD-idI"/>
     </inferredMetricsTieBreakers>
 </document>
