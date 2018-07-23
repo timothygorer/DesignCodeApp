@@ -2,8 +2,8 @@
 //  MoreViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 14/01/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Tim Gorer on 14/01/18.
+//  Copyright © 2018 Tim Gorer. All rights reserved.
 //
 
 import UIKit
@@ -89,10 +89,10 @@ class MoreViewController: UIViewController {
         performSegue(withIdentifier: "More to Web", sender: "https://spectrum.chat/design-code")
     }
     @IBAction func twitterHandleTapped(_ sender: Any) {
-        performSegue(withIdentifier: "More to Web", sender: "https://twitter.com/mengto")
+        performSegue(withIdentifier: "More to Web", sender: "https://twitter.com/timgorer")
     }
     @IBAction func emailButtonTapped(_ sender: Any) {
-        let email = "meng@designcode.io"
+        let email = "timefraimg@gmail.com"
         if let url = URL(string: "mailto:\(email)") {
             UIApplication.shared.open(url)
         }

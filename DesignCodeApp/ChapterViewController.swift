@@ -3,7 +3,7 @@
 //  DesignCodeApp
 //
 //  Created by Tim Gorer on 7/22/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Copyright © 2018 Tim Gorer. All rights reserved.
 //
 
 import UIKit
@@ -54,7 +54,10 @@ extension ChapterViewController : UICollectionViewDataSource {
         let section = sections[indexPath.row]
         cell.titleLabel.text = section.title
         cell.captionLabel.text = section.caption
-        cell.coverImageView.setImage(from: section.imageURL!)
+        
+        if ((section.imageURL) != nil) {
+            cell.coverImageView.setImage(from: (section.imageURL)!)
+        }
         
         cell.layer.transform = animateCell(cellFrame: cell.frame)
         

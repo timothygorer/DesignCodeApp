@@ -3,7 +3,7 @@
 //  DesignCodeApp
 //
 //  Created by Tim Gorer on 7/22/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Copyright © 2018 Tim Gorer. All rights reserved.
 //
 
 import Foundation

@@ -2,8 +2,8 @@
 //  ExercisesTableViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 30/01/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Tim Gorer on 30/01/18.
+//  Copyright © 2018 Tim Gorer. All rights reserved.
 //
 
 import UIKit
@@ -33,7 +33,7 @@ extension ExercisesTableViewController : ExerciseTableViewCellDelegate {
 
     func exerciseCell(_ cell: ExerciseTableViewCell, didReceiveShareFor exercise: Array<Dictionary<String, Any>>, onScoreCell scoreCell: ScoreCollectionViewCell) {
 
-        let message = "🙌 72% in the iOS Design challenge from the Design+Code app by @MengTo"
+        let message = "🙌 72% in the iOS Design challenge from the Design+Code app by @TimGorer"
         let link = URL(string: "https://designcode.io/")!
         guard let image = UIImage(view: scoreCell) else { return }
 

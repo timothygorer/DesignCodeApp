@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  DesignCodeApp
 //
-//  Created by Meng To on 11/14/17.
-//  Copyright © 2017 Meng To. All rights reserved.
+//  Created by Tim Gorer on 11/14/17.
+//  Copyright © 2017 Tim Gorer. All rights reserved.
 //
 
 import UIKit

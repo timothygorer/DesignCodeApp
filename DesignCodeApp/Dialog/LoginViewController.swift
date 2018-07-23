@@ -2,8 +2,8 @@
 //  LoginViewController.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 29/01/18.
-//  Copyright © 2018 Meng To. All rights reserved.
+//  Created by Tim Gorer on 29/01/18.
+//  Copyright © 2018 Tim Gorer. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  BookmarkTableViewCell.swift
 //  DesignCodeApp
 //
-//  Created by Tiago Mergulhão on 19/12/17.
-//  Copyright © 2017 Meng To. All rights reserved.
+//  Created by Tim Gorer on 19/12/17.
+//  Copyright © 2017 Tim Gorer. All rights reserved.
 //
 
 import UIKit

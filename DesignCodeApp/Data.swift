@@ -2,8 +2,8 @@
 //  Data.swift
 //  DesignCodeApp
 //
-//  Created by Meng To on 12/17/17.
-//  Copyright © 2017 Meng To. All rights reserved.
+//  Created by Tim Gorer on 12/17/17.
+//  Copyright © 2017 Tim Gorer. All rights reserved.
 //
 
 import UIKit
@@ -108,7 +108,7 @@ let testimonials = [
         "avatar": "avatar-chris-ching"
     ],
     [
-        "text": "I began a Swift learning plan 5 days ago, this is part of what I did in five days. I learned a lot from Meng To's Design+Code.",
+        "text": "I began a Swift learning plan 5 days ago, this is part of what I did in five days. I learned a lot from Tim Gorer's Design+Code.",
         "name": "MartinRGB",
         "job": "Designer and Coder",
         "avatar": "avatar-martin-rgb"
@@ -120,13 +120,13 @@ let testimonials = [
         "avatar": "avatar-wayne-sang"
     ],
     [
-        "text": "I found and bought Design+Code by Meng To which takes you through each step of the process from design to code to app store submission.",
+        "text": "I found and bought Design+Code by Tim Gorer which takes you through each step of the process from design to code to app store submission.",
         "name": "Kenny Chen",
         "job": "User Experience Designer at Bankrate",
         "avatar": "avatar-kenny-chen"
     ],
     [
-        "text": "Thanks to @MengTo, I was able to get a rough prototype of my first app working this weekend.",
+        "text": "Thanks to @TimGorer, I was able to get a rough prototype of my first app working this weekend.",
         "name": "Andrew McCarthy",
         "job": "Product Designer",
         "avatar": "avatar-andrew-mccarthy"
