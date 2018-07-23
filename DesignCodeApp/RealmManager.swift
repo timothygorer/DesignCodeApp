@@ -15,6 +15,14 @@ class RealmManager {
     static var bookmarks : Results<Bookmark> { return realm.objects(Bookmark.self) }
 
     static var sections : Results<Section> { return realm.objects(Section.self) }
+    
+    class func chapter(withId chapterId : String) -> Chapter? {
+        
+        return realm
+            .objects(Chapter.self)
+            .filter("id = %@", chapterId)
+            .first
+    }
 
     class func remove(_ bookmark : Bookmark) {
         

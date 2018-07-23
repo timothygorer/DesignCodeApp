@@ -46,8 +46,6 @@ class HomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         scrollView.delegate = self
-        chapter1CollectionView.delegate = self
-        chapter1CollectionView.dataSource = self
         
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
@@ -74,6 +72,11 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         switch identifier {
+        case "Embed Chapter":
+            let destination = segue.destination as! ChapterViewController
+            destination.chapter = RealmManager.chapter(withId: "1")
+            destination.view.translatesAutoresizingMaskIntoConstraints = false
+            
         case "HomeToSection":
             let destination = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
@@ -82,12 +85,6 @@ class HomeViewController: UIViewController {
             destination.sections = sections
             destination.indexPath = indexPath
             destination.transitioningDelegate = self
-
-            let attributes = chapter1CollectionView.layoutAttributesForItem(at: indexPath)!
-            let cellFrame = chapter1CollectionView.convert(attributes.frame, to: view)
-
-            presentSectionViewController.cellFrame = cellFrame
-            presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
 
             isStatusBarHidden = true
             UIView.animate(withDuration: 0.5, animations: {
@@ -117,28 +114,6 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sectionCell", for: indexPath) as! SectionCollectionViewCell
-        let section = sections[indexPath.row]
-        cell.titleLabel.text = section.title
-        cell.captionLabel.text = section.caption
-        cell.coverImageView.setImage(from: section.imageURL!)
-        
-        cell.layer.transform = animateCell(cellFrame: cell.frame)
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "HomeToSection", sender: indexPath)
-    }
-}
-
 extension HomeViewController : UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -147,7 +122,20 @@ extension HomeViewController : UIViewControllerTransitioningDelegate {
     }
 }
 
-extension HomeViewController: UIScrollViewDelegate {
+extension HomeViewController : ChapterCollectionDelegate {
+    
+    func didTap(cell: SectionCollectionViewCell, on collectionView: UICollectionView, for section: Section, with transform: CATransform3D) {
+        let indexPath = collectionView.indexPath(for: cell)!
+        let attributes = chapter1CollectionView.layoutAttributesForItem(at: indexPath)!
+        let frame = chapter1CollectionView.convert(attributes.frame, to: view)
+        presentSectionViewController.cellFrame = frame
+        presentSectionViewController.cellTransform = transform
+        
+        performSegue(withIdentifier: "HomeToSection", sender: indexPath)
+    }
+}
+
+extension HomeViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY < 0 {
@@ -158,41 +146,7 @@ extension HomeViewController: UIScrollViewDelegate {
             backgroundImageView.transform = CGAffineTransform(translationX: 0, y: -offsetY/5)
         }
         
-        if let collectionView = scrollView as? UICollectionView {
-            for cell in collectionView.visibleCells as! [SectionCollectionViewCell] {
-                let indexPath = collectionView.indexPath(for: cell)!
-                let attributes = collectionView.layoutAttributesForItem(at: indexPath)!
-                let cellFrame = collectionView.convert(attributes.frame, to: view)
-                
-                let translationX = cellFrame.origin.x / 5
-                cell.coverImageView.transform = CGAffineTransform(translationX: translationX, y: 0)
-                
-                cell.layer.transform = animateCell(cellFrame: cellFrame)
-            }
-        }
-        
         let navigationIsHidden = offsetY <= 0
         navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
-    }
-    
-    func animateCell(cellFrame: CGRect) -> CATransform3D {
-        let angleFromX = Double((-cellFrame.origin.x) / 10)
-        let angle = CGFloat((angleFromX * Double.pi) / 180.0)
-        var transform = CATransform3DIdentity
-        transform.m34 = -1.0/1000
-        let rotation = CATransform3DRotate(transform, angle, 0, 1, 0)
-        
-        var scaleFromX = (1000 - (cellFrame.origin.x - 200)) / 1000
-        let scaleMax: CGFloat = 1.0
-        let scaleMin: CGFloat = 0.6
-        if scaleFromX > scaleMax {
-            scaleFromX = scaleMax
-        }
-        if scaleFromX < scaleMin {
-            scaleFromX = scaleMin
-        }
-        let scale = CATransform3DScale(CATransform3DIdentity, scaleFromX, scaleFromX, 1)
-        
-        return CATransform3DConcat(rotation, scale)
     }
 }
