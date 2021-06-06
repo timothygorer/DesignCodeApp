@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES" codeGenerationType="class">
+        <relationship name="part" maxCount="1" deletionRule="Nullify" destinationEntity="Part"/>
+        <relationship name="section" maxCount="1" deletionRule="Nullify" destinationEntity="Section"/>
+    </entity>
+    <entity name="Part" representedClassName="Part" syncable="YES" codeGenerationType="class">
+        <attribute name="content" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="section" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Section" inverseName="parts" inverseEntity="Section"/>
+    </entity>
+    <entity name="Section" representedClassName="Section" syncable="YES" codeGenerationType="class">
+        <attribute name="body" attributeType="String"/>
+        <attribute name="caption" attributeType="String"/>
+        <attribute name="chapterNumber" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageName" attributeType="String"/>
+        <attribute name="publishDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="parts" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Part" inverseName="section" inverseEntity="Part"/>
+    </entity>
+    <elements>
+        <element name="Section" positionX="-176.5224304199219" positionY="102.5275268554688" width="128" height="163"/>
+        <element name="Part" positionX="95.662841796875" positionY="173.5101623535156" width="128" height="118"/>
+        <element name="Bookmark" positionX="26.7138671875" positionY="-69.59939575195312" width="128" height="73"/>
+    </elements>
+</model>

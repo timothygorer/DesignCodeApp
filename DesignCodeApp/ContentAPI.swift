@@ -8,91 +8,80 @@
 
 import Foundation
 
-struct Section : Codable {
+struct BookmarkCodable : Codable {
+    var sectionId: String
+    var partId: String
+}
+
+struct SectionCodable : Codable {
+    
+    var id : String
+    var chapterNumber : String
+    
     var title : String
     var caption : String
     var body : String
     var imageName : String
     var publishDate : Date
-    
-    enum CodingKeys : String, CodingKey {
-        case title, caption, body
-        case imageName = "image"
-        case publishDate = "publish_date"
-    }
 }
 
-struct Bookmark : Codable {
-    var typeName : String
-    var chapterNumber : String
-    var sectionTitle : String
-    var partHeading : String
-    var content : String
+struct PartCodable : Codable {
     
-    enum BookmarkType : String {
+    enum PartType : String {
         case text, image, video, code
     }
     
-    var type : BookmarkType?
+    var type : PartType?
+    
+    var id : String
+    
+    var typeName : String
+    var title : String
+    var content : String
     
     enum CodingKeys : String, CodingKey {
+        case content, id, title
         case typeName = "type"
-        case chapterNumber = "chapter"
-        case sectionTitle = "section"
-        case partHeading = "part"
-        case content
     }
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
+        id = try values.decode(String.self, forKey: .id)
         typeName = try values.decode(String.self, forKey: .typeName)
-        chapterNumber = try values.decode(String.self, forKey: .chapterNumber)
-        sectionTitle = try values.decode(String.self, forKey: .sectionTitle)
-        partHeading = try values.decode(String.self, forKey: .partHeading)
+        title = try values.decode(String.self, forKey: .title)
         content = try values.decode(String.self, forKey: .content)
         
-        type = BookmarkType(rawValue: typeName)
+        type = PartType(rawValue: typeName)
     }
 }
 
 class ContentAPI {
     static var shared : ContentAPI = ContentAPI()
     
-    // lazy: until you call it, it has no value.
-    lazy var sections : Array<Section> = {
-        guard let path = Bundle.main.path(forResource: "Sections", ofType: "json") else { return [] }
-        let url = URL(fileURLWithPath: path)
+    func load<T: Codable>(into swiftType : T.Type, resource : String, ofType type : String = "json") -> T? {
         
-        guard let data = try? Data(contentsOf: url) else { return [] }
+        let path = Bundle.main.path(forResource: resource, ofType: type)
+        let url = URL(fileURLWithPath: path!)
         
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .secondsSince1970
-            let sections = try decoder.decode(Array<Section>.self, from: data) // decode the json
-            return sections
-        } catch {
-            print(error)
-        }
+        guard let data = try? Data(contentsOf: url) else { return nil }
         
-        return []
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .secondsSince1970
+        
+        return try! decoder.decode(swiftType.self, from: data)
+    }
+    
+    lazy var bookmarks : Array<BookmarkCodable> = {
+        return load(into: Array<BookmarkCodable>.self, resource: "Bookmarks") ?? []
     }()
     
-    lazy var bookmarks : Array<Bookmark> = {
-        guard let path = Bundle.main.path(forResource: "Bookmarks", ofType: "json") else { return [] }
-        let url = URL(fileURLWithPath: path)
-        
-        guard let data = try? Data(contentsOf: url) else { return [] }
-        
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .secondsSince1970
-            let bookmarks = try decoder.decode(Array<Bookmark>.self, from: data) // decode the json
-            return bookmarks
-        } catch {
-            print(error)
-        }
-        
-        return []
+    lazy var sections : Array<SectionCodable> = {
+        return load(into: Array<SectionCodable>.self, resource: "Sections") ?? []
+    }()
+    
+    lazy var parts : Array<PartCodable> = {
+        return load(into: Array<PartCodable>.self, resource: "Parts") ?? []
     }()
 }
